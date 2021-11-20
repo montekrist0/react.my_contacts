@@ -1,12 +1,13 @@
 import React from "react";
 import Contacts from "/src/contacts.js";
+import Avatar from "./Avatar";
 
 function Card(props) {
   return (
     <div className="card">
       <div className="top">
         <h2 className="name">{props.name}</h2>
-        <img className="circle-img" src={props.imgURL} alt="avatar_img" />
+        <Avatar url={props.imgURL} />{" "}
       </div>
       <div className="bottom">
         <p className="info">{props.phone}</p>
