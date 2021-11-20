@@ -1,21 +1,7 @@
 import React from "react";
 import Contacts from "/src/contacts.js";
 import Avatar from "./Avatar";
-
-function Card(props) {
-  return (
-    <div className="card">
-      <div className="top">
-        <h2 className="name">{props.name}</h2>
-        <Avatar url={props.imgURL} />{" "}
-      </div>
-      <div className="bottom">
-        <p className="info">{props.phone}</p>
-        <p className="info">{props.email}</p>
-      </div>
-    </div>
-  );
-}
+import Card from "./Card";
 
 function CardList(contacts) {
   const cards = contacts.cards;
@@ -38,6 +24,7 @@ function App() {
   return (
     <div>
       <h1 className="heading">My Contacts</h1>
+      <Avatar url="https://sun9-86.userapi.com/impg/bwRLt9PSuLalQ3QMmTU7qUdwziP48kBnL9Jomw/Qo6LdBJxM2I.jpg?size=1620x2160&quality=96&sign=14e17e53d2f56bf91b0b44242e60fe3b&type=album" />
       <CardList cards={Contacts} />
     </div>
   );
